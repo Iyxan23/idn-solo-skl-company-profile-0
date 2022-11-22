@@ -1,0 +1,403 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Company Profile</title>
+
+        <!-- Bootstrap's CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous"
+        />
+
+        <!-- My customizations to bootstrap -->
+        <style>
+            .carousel-item img {
+                object-fit: cover;
+                position: relative;
+                z-index: -1;
+            }
+
+            .carousel-inner {
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0) 50%,
+                    rgba(0, 0, 0, 0.7)
+                );
+            }
+
+            .card-img-overlay {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav
+                id="navbar"
+                class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+            >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#home-carousel"
+                        >Company profile</a
+                    >
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-md-0">
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    aria-current="page"
+                                    href="#home-carousel"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#what-we-made"
+                                    >What we Made</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#fellow-mates"
+                                    >Fellow Mates</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div
+            data-bs-spy="scroll"
+            data-bs-root-margin="0px 0px -40%"
+            data-bs-smooth-scroll="true"
+            data-bs-target="#navbar"
+        >
+            <div
+                id="home-carousel"
+                class="carousel slide vh-100"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        data-bs-target="#home-carousel"
+                        data-bs-slide-to="0"
+                        class="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#home-carousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                    ></button>
+                    <button
+                        type="button"
+                        data-bs-target="#home-carousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                    ></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                            class="d-block vh-100 w-100"
+                            alt="Code"
+                        />
+                        <div class="carousel-caption text-start mb-5">
+                            <h5>Reliable Software</h5>
+                            <p>
+                                We build reliable software using popular
+                                frameworks such as Bootstrap, Tailwind and
+                                React.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            class="d-block vh-100 w-100"
+                            alt="People talking"
+                        />
+                        <div class="carousel-caption text-start mb-5">
+                            <h5>Enabling Better Teamwork</h5>
+                            <p>
+                                Nothing incredible is built by a person,
+                                teamwork is essential to building better
+                                software.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1505455184862-554165e5f6ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+                            class="d-block vh-100 w-100"
+                            alt="Open-source"
+                        />
+                        <div class="carousel-caption text-start mb-5">
+                            <h5>Embracing Open-source</h5>
+                            <p>
+                                There is no modern app that doesn't rely on
+                                Open-source software. Opennes is essential to
+                                creating better and more robust software.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#home-carousel"
+                    data-bs-slide="prev"
+                >
+                    <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#home-carousel"
+                    data-bs-slide="next"
+                >
+                    <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div id="about" class="container mt-3 mt-sm-5 mx-12">
+                <h4>About</h4>
+                <div class="row">
+                    <div class="col-md-6 col-lg-9">
+                        <div class="row">
+                            <div class="col-12">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Eveniet rerum porro
+                                    impedit, dicta quo molestias ratione omnis
+                                    consequatur harum in odit numquam. Mollitia
+                                    libero et animi magnam, praesentium
+                                    exercitationem odit!
+                                </p>
+                            </div>
+
+                            <div class="col-12">
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Ipsa autem quaerat
+                                    accusamus voluptatum sequi modi velit eaque
+                                    ullam tempore, optio, perferendis mollitia
+                                    pariatur doloremque quia hic quisquam vitae!
+                                    Sequi, facere!
+                                </p>
+                            </div>
+
+                            <div class="col-12">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Nulla aperiam ad commodi
+                                    dolore? Suscipit deserunt assumenda possimus
+                                    voluptate obcaecati, itaque provident
+                                    voluptatum, quaerat dolores magni, laborum
+                                    cupiditate nostrum distinctio tempore.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <img
+                            class="h-100 w-100 rounded"
+                            src="https://images.unsplash.com/photo-1510146758428-e5e4b17b8b6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                            alt="A picture of us"
+                        />
+                    </div>
+                </div>
+
+                <hr class="mt-5" />
+
+                <figure class="mt-4 text-center">
+                    <blockquote class="blockquote">
+                        <p>Talk is cheap, show me the code.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Linus Torvalds
+                    </figcaption>
+                </figure>
+
+                <hr class="mt-4" />
+            </div>
+
+            <div id="what-we-made" class="container mt-3 mt-sm-5 mx-12">
+                <h4 class="mt-5">What we Made</h4>
+                <div class="row gx-4 g-4 mt-1 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card text-bg-dark border-0">
+                            <img
+                                src="/assets/img/google.png"
+                                class="card-img"
+                                alt="Google"
+                            />
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Google</h5>
+                                <p class="card-text">
+                                    Google is a very cool search engine that we
+                                    have developed for the past 10 years
+                                </p>
+
+                                <a
+                                    target="_blank"
+                                    href="https://google.com"
+                                    class="btn btn-primary stretched-link"
+                                    >Open</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card text-bg-dark border-0">
+                            <img
+                                src="/assets/img/wikipedia.png"
+                                class="card-img"
+                                alt="Wikipedia"
+                            />
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Wikipedia</h5>
+                                <p class="card-text">
+                                    A warehouse of information ranging from
+                                    programming to a random people online.
+                                </p>
+
+                                <a
+                                    target="_blank"
+                                    href="https://wikipedia.com"
+                                    class="btn btn-primary stretched-link"
+                                    >Open</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card text-bg-dark border-0">
+                            <img
+                                src="/assets/img/figma.png"
+                                class="card-img"
+                                alt="Figma"
+                            />
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">Figma</h5>
+                                <p class="card-text">
+                                    A tool to bring your design inspirations and
+                                    ideas to life.
+                                </p>
+
+                                <a
+                                    target="_blank"
+                                    href="https://figma.com"
+                                    class="btn btn-primary stretched-link"
+                                    >Open</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fellow-mates" class="container mt-3 mt-sm-5 mx-12">
+                <h4 class="mt-5">Fellow Mates</h4>
+                <div class="container mt-4">
+                    <div class="card-group w-lg-50">
+                        <div class="card">
+                            <img
+                                src="/assets/img/ihsan.png"
+                                class="card-img-top"
+                                alt="Ihsan"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Ihsan</h5>
+                                <p class="card-text">
+                                    Did this website using Bootstrap.
+                                </p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small class="text-muted"
+                                    >"Pakek aja linux"</small
+                                >
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="https://avatars.githubusercontent.com/u/110365675?v=4"
+                                class="card-img-top"
+                                alt="Ridho"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Ridho Akhsan</h5>
+                                <p class="card-text">A friend of Ihsan's.</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small class="text-muted">"Спасибо"</small>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="https://avatars.githubusercontent.com/u/28994431"
+                                class="card-img-top"
+                                alt="Ustadz Tio"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Ustadz Tio</h5>
+                                <p class="card-text">
+                                    The IT teacher in IDN Solo.
+                                </p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <small class="text-muted"
+                                    >"Wah keren mas"</small
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid mt-5 bg-dark text-center p-3">
+            <p class="text-white m-0">
+                Copyright &copy; Nur Ihsan Al Ghifari 2022
+            </p>
+        </footer>
+
+        <!-- Bootstrap's Javascript -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
